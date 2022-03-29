@@ -66,7 +66,7 @@ Here are the exercises you have to solve to familiarise yourself with Python usi
 
 15. Calculate the mean, median, standard deviation, and variance of the petal width of all the samples in the dataset.
 
-16.Plot a histogram of the sepal length of all the samples in the dataset.
+16. Plot a histogram of the sepal length of all the samples in the dataset.
 
 17. Plot a histogram of the sepal width of all the samples in the dataset.
 

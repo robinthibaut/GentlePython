@@ -118,35 +118,16 @@ for i in range(1, 6):
 # its value by 1 until numberOfIterations == 6. Whole numbers only for range function! Starting with 0 instead of 1
 # does not change results because python starts counting at 0 for lists so either way we get 0-5. The result is also
 # identical had we just done range(6): The code would have still started at 0 then gone up by one where its final
-# value would be 5 after executing 6 times! Note that it always starts at 0 when doing range(n). The last number
-# given must be n+1 to get n number of iterations starting at 0! It always goes up in intervals of 1 UNLESS an
-# additional argument 3rd argument is specified (range(0,11,2)) goes up by 2's instead of 1's!). Look up range
-# function if you are unfamiliar with it! The final number of iterations depends on how many numbers are counted
-# starting from startingNumber TO endingNumber WHERE endingNumber < finalNumberOfIterations otherwise we would get a
-# blank line because there would never be another iteration! Example Range(2 to 10 counts 8 numbers!) 2 3 4 5 6 7 8 9
-# 10  |Range(2 to 11 counts 9 numbers!) 2 3 4 5 6 7 8 9 10 11 |Range(3 to 12 counts 9 numbers!) 3 4 5 6 7 8 9 10 11
-# 12|Range(4 to 13 counts 9 numbers!) 4 5 6 7 8 9 10 11 12 13|Range(0 to 10 counts 10Numbers!) 0 1 2 3 4 5 6 7 8 9 10
-# | Note that range STILL starts counting at 0 even though we specified a start value of 2 and an end value of 10
-# instead of saying numberOfIterations and endingValue respectively! Once loop terminates its final value
-# incrementally increases according to how many iterations there have been already!:LoopI0 + EndValueRemains0LoopI1 +
-# EndValueRemains1LoopI2 + EndValueRemains2LoopI3 + EndValueRemains3LoopI4 + EndValueRemains4LoopI5 +
-# EndValueRemains5 etc...Just remember that python starts counting at zero for lists so either way you would get
-# 0-5! Try different values for yourself such as range(1,9), range(0,11), range(10). You should always get 9 values
-# returned instead of 8 just remember your ending value must always be n+1! The goal here is to understand why the
-# final result of printing this out should contain 9 values not just 8 no matter how many times or which way I run my
-# loop even though I only specified an end value of 8 for numberOfIterations!: 4,2,3,4,2, 3,4,2,3. (Note how we are
-# missing the number 1 and not 8 because range() function starts counting at 0). This same example can be written in
-# a for loop in the form for i in range(1,9) and will produce the same result when printing.
+# value would be 5 after executing 6 times! Note that it always starts at 0 when doing range(n).
 
 for i in range(
     4
 ):  # This is the same for loop as above but with a different integer value! This loop starts at 0 instead of 1 and
-    # ends at numberOfIterations -1 (for 4 iterations we would do range(0,5) where 5 is numberOfIterations+1 and
-    # would result in 0-4 being returned instead of 1-5 as we have done above!
+    # ends at numberOfIterations -1. This means that the loop will execute 4 times!
     print(
         i
     )  # Print all values in order of iteration! Range function is really useful and again make sure you look it up
-    # if you are not 100% comfortable with it! It will come up in an interview!
+    # if you are not 100% comfortable with it!
 
 fruits = [
     "Apples",
@@ -186,7 +167,7 @@ if (
     # more than one condition in order to come to a conclusion. One of the most important things to take away from
     # this is that you must write your if statement with a colon at the ending and indent each line of code with 4
     # spaces or a tab in order to execute it properly! Everything after this colon is considered by Python to be
-    # part of our if-block or if statement's suite of statements (indentation is important here) In short this line:
+    # part of our if-block or if statement's suite of statements (indentation is important here). In short this line:
     # if 13<20: means that if our condition is true then proceed to execute code in if-block.
     print(
         "condition"
@@ -223,14 +204,13 @@ else:  # If condition/expression does not hold true, then else will be executed 
 age = int(
     input("Enter Age: ")
 )  # Note that this only works when one condition must hold true. In cases where we want an input value to be equal
-# to one value or another then we would have to use an 'if elif else' (if-else-if). Copy+Paste the following lines
-# between lines 58-61 in the PyCharm IDLE Editor and make sure notes are read before executing for understanding!:
+# to one value or another then we would have to use an 'if elif else' (if-else-if).
 
 if (
     age >= 5 and age <= 10
 ):  # This if statement checks whether age is greater than or equal to 5 AND less than or equal to 10 using a logical
-    # operator "and". Which means both conditions must hold true in this case!, It Has Been Met We Can Now Execute
-    # The Code In The Following Block
+    # operator "and". Which means both conditions must hold true in this case!, It has been met and we can now execute
+    # the code in the following block
     print("Go To Primary School")
 
 elif (
@@ -253,6 +233,7 @@ fruits = [
 ]  # This will create a list variable that contains 3 string values. Lists can hold many different types of data and
 # can be indexed in the same way strings are! It is important to note the difference between mutable and immutable
 # variables. Mutable variables are ones which can be changed in place whilst immutable variables cannot be.
+
 # Appending, removing and changing values in lists is perfectly fine to do on the spot as they are considered
 # mutable. Strings and Tuple or two examples of immutable data types. You can not change values stored in strings or
 # tuples by indexing them instead must create a brand-new variable. Let's talk about tuples now!
@@ -263,7 +244,7 @@ fruits = (
     "Grapes",
 )  # This will create a tuple variable that contains 4 string values. Tuples are also lists except they are
 # surrounded by parenthesis instead of brackets, their variety in which they store data is also less. Tuples values
-# can not be changed however they can be removed, or added to entirely- new variant called concatenation is used to
+# can not be changed. However they can be removed, or added to entirely- new variant called concatenation is used to
 # accomplish this however this is much slower than standard appending operations offered by lists so one should
 # consider using lists over tuples unless you have some good reason not to! Tuples use less memory than lists and
 # are very relevant in situations such as sequences with an undefined length (such as a file's contents). Tuples like
@@ -285,6 +266,7 @@ no_duplicates = set(
 )  # We create a new set which is surrounded by curly brackets {}, however this time our set is empty because we have
 # nothing inside the curly braces. We could simply have done no_duplicates = {} but then we would end up with an
 # empty dictionary instead so make sure you get familiar with these structures quickly!
+
 # Part #11 : Dictionaries
 account = {
     "username": "python",
@@ -343,10 +325,7 @@ empty_dict3 = copy.copy(
 
 # Part #12 : Mutable Versus Immutable Types
 myint = 10  # Integers are immutable meaning that once created we can not change the contained value in place but we
-# can overwrite it entirely. (We will look at overwriting another time). Take note of how if i try to change the
-# value of myint in memory to '20' then i will get a TypeError saying that i can't do that because myint is
-# immutable! Attempting to change values in immutable data structures usually result in errors and you will get very
-# familiar with them soon enough! The same goes for strings, strings are also immutable meaning you cant change their
+# can overwrite it entirely. The same goes for strings, strings are also immutable meaning you can't change their
 # contained values either! Try creating your own integer variable and string variable and see what happens when you
 # attempt to modify them!
 print(myint)  # This will print out 10 because it was originally 10
@@ -356,15 +335,15 @@ myint = 20  # This will overwrite value of myint stored in memory space (will no
 print(
     myint
 )  # This will now print out 20! Because myint got overwritten but never modified in place! The same goes for
-# strings! Here is an example with strings: Here is an example with strings: Strings are actually sequences which
+# strings! Here is an example with strings: Strings are actually sequences which
 # means that if given an index in astring[0] we will get whatever character is located at index 0 within our string,
 # if such an index does not exist then python throws an error telling us of this. This means however that we can play
 # around with strings and slice them, split them or even join them together! In order to join two strings together
 # we use something called concatenation. Concatenation is when we add one string to another like so:
 # someStringVariableName + "SomeOtherString". This works because "+" is overloaded and here means concatenation!
-# Concatenation always creates a new string, it does not modify either of it's parameters in place! So be careful
-# when performing operations on strings! Last but not least lets talk about lists since these are mutable and we can
-# modify the contained values in them if we so choose!
+# Concatenation always creates a new string, it does not modify either of its parameters in place! So be careful
+# when performing operations on strings! Last but not the least lets talk about lists since these are mutable,
+# and we can modify the contained values in them if we so choose!
 mylist = [1, 2, 3, 4]  # Create new list with values 1-4
 print(mylist)  # Print out values in mylist, which will be (1,2,3,4)
 mylist[
@@ -397,11 +376,7 @@ please but will still have the desired effect! """
 # This will print nothing to the console but if you hover over it
 # then look at its tooltip then you will see it is there! You can also right-click on it and select view docstring
 # to open up a window containing this text! Note that comments and docstrings are strip out by python when it
-# executes so don't worry about taking up memory space when writing code! Also know that execution happens from top
-# down so even if this was placed on top empty line it would still be executed first as long as nothing precedes it!
-# You should be aware that some programming languages ignore single line comments entirely but this does not apply to
-# python so make sure you get used to using them! Copy+paste the following lines into PyCharm underneath your
-# preceding lines 53-70:
+# executes so don't worry about taking up memory space when writing code!
 
 
 def message():  # Declare function message() which does not take any parameters.
@@ -420,9 +395,9 @@ def myfunc(
 ):  # Define function that takes single parameter. When we call a function we pass arguments via parameters. In the
     # example below our argument is 'n' and the value that is passed in to the function (i.e. myfunc(5)) will be
     # assigned to 'n'. In this case 5 will be assigned to n inside the function body. If we forget to pass in an
-    # argument when calling a function then we get what we call a TypeError! Copy+paste this code in PyCharm
-    # underneath your preceding lines 75-85! Note that when declaring functions, you must always include a colon (:)
-    # at the end! Remember when using def keyword to define functions: def someFunctionName():
+    # argument when calling a function then we get what we call a TypeError!
+    # Note that when declaring functions, you must always include a colon (:) at the end!
+    # Remember when using def keyword to define functions: def someFunctionName():
     if (
         n % 2 == 0
     ):  # We create an if statement to check if remainder of n/2 is equal to 0, % means modulus or remainder and ==

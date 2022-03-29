@@ -43,9 +43,6 @@ class Person(object):
     def greet(self):
         print("{self} says... Hello, how are you today?")
 
-    # These functions/methods seem to be more generally called behaviors in the literature.
-    # They represent how objects of this type respond to various external stimuli.
-
     def changeName(self, newName):
         self.name = newName
 

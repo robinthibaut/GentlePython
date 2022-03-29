@@ -26,7 +26,7 @@ b = [["One", "Two", "Three"], ["Four", "Five", "Six"]]
 # Exercise 5 - Print a random number between zero and one.
 # Hint: use import random
 
-# Exercise 6 - Given a list of numbers, check if all of the
+# Exercise 6 - Given a list of numbers, check if all the
 # numbers are divisible by 7. If they are divisible,
 # return True otherwise False.
 list_of_numbers = [33, 49, 63, 81, 91, 105, 112]

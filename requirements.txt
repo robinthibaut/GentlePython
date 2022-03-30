@@ -1,0 +1,5 @@
+numpy~=1.22.3
+requests~=2.27.1
+Pillow~=9.0.1
+matplotlib~=3.5.1
+scikit-learn~=1.0.2
